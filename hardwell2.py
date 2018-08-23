@@ -5,7 +5,7 @@ from selenium.webdriver.chrome.options import Options
 
 #after parsing the URL link for each single, we store the URL into music_url variable
 
-music_url='https://music.163.com/#/album?id=38299173'
+music_url='https://music.163.com/#/album?id=38299173'#here I use steve aoki's anthem as an example
 desired_capabilities = DesiredCapabilities.CHROME.copy()
 driver = webdriver.Chrome('C:\\Users\\themi\\Desktop\\chromedriver_win32\\chromedriver.exe',desired_capabilities=desired_capabilities)
 driver.get(music_url)
@@ -13,7 +13,7 @@ driver.get(music_url)
 #cookie is extremely important in this process. It is my only identifier. It also bypasses the authorization system, which is disabled by the server if I'm using automated web browser
 
 name='MUSIC_U'
-value='5e9b03e05649f4596785d3263cfbe395ca11528ff12602eba821bc33deebb17254c96c1a53b02de333f7976066421fdc7955a739ab43dce1'
+value='your cookie value goes here, which is MD5 encrypted. You can find the cookie value using Google dev tool in the application section'
 print("adding cookie...")
 driver.add_cookie({'name':name,'value':value})
 print('added')
